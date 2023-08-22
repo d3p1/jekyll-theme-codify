@@ -1,12 +1,14 @@
 /**
  * @description Dev container configuration for Jekyll theme development
  * @author      Cristian Marcelo de Picciotto <d3p1@d3p1.dev>
+ * @note        It is necessary to add a post create command to install `openssh`, needed to interact with Git repositories by SSH
  */
 {
-	"dockerFile"     : "Dockerfile",
-	"workspaceMount" : "source=${localWorkspaceFolder},target=/srv/jekyll,type=bind,consistency=cached",
-	"workspaceFolder": "/srv/jekyll", 
-	"customizations" : {
+	"dockerFile"       : "Dockerfile",
+	"workspaceMount"   : "source=${localWorkspaceFolder},target=/srv/jekyll,type=bind,consistency=cached",
+	"workspaceFolder"  : "/srv/jekyll",
+	"postCreateCommand": "apk add --no-cache openssh",
+	"customizations"   : {
 		"vscode": {
 			"extensions": [
 				"sissel.shopify-liquid"
