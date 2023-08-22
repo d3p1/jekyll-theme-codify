@@ -1,0 +1,16 @@
+/**
+ * @description Dev container configuration for Jekyll theme development
+ * @author      Cristian Marcelo de Picciotto <d3p1@d3p1.dev>
+ */
+{
+	"dockerFile"     : "Dockerfile",
+	"workspaceMount" : "source=${localWorkspaceFolder},target=/srv/jekyll,type=bind,consistency=cached",
+	"workspaceFolder": "/srv/jekyll", 
+	"customizations" : {
+		"vscode": {
+			"extensions": [
+				"sissel.shopify-liquid"
+			]
+		}
+	}
+}
