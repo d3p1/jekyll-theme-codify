@@ -7,7 +7,7 @@
  */
 {
 	"dockerFile"       : "Dockerfile",
-	"workspaceMount"   : "${localWorkspaceFolder}:/srv/jekyll:cached",
+	"workspaceMount"   : "source=${localWorkspaceFolder},target=/srv/jekyll,type=bind,consistency=cached",
 	"workspaceFolder"  : "/srv/jekyll",
 	"postCreateCommand": "apk add --no-cache openssh",
 	"customizations"   : {
