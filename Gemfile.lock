@@ -3,6 +3,7 @@ PATH
   specs:
     jekyll-theme-codify (0.1.0)
       jekyll (~> 4.3)
+      jekyll-theme-chirpy (~> 6.1)
 
 GEM
   remote: https://rubygems.org/
