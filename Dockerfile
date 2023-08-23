@@ -8,13 +8,33 @@
 ##
 FROM jekyll/minimal:4.0
     ##
+    # @note The Jekyll official image only has the `root` user 
+    #       as an available shell user. 
+    #       There is a `jekyll` user but it does not have shell access.
+    #       This `jekyll` user must be the owner of the source code.
+    #       It is necessary to re-create this `jekyll` user 
+    #       to be able to develop/work with the site code 
+    #       without using the `root` user.
+    #       Using the `root` user causes inconveniences related to
+    #       file permissions when it is worked with the source code
+    #       (i.e. files are created using `root:root`)
+    # @see  <project_root_dir>/.devcontainer.json
+    # @link https://github.com/envygeeks/jekyll-docker/blob/master/repos/jekyll/Dockerfile#L148
+    # @link https://www.baeldung.com/linux/docker-alpine-add-user
+    ##
+    ARG USER_UID=1000
+    ARG USER_GID=$USER_UID
+    RUN deluser jekyll
+    RUN groupadd --gid ${USER_GID} jekyll
+    RUN useradd --uid ${USER_UID} --gid ${USER_GID} -m jekyll
+
+    ##
     # @note Set working directory and copy related files to build site
-    # @note Use `jekyll` as `user:group` as it is used in the base image
-    #       for this path
     # @note We are going to copy the `Gemfile` and `Gemfile.lock` first 
     #       to cache them. If `Gemfile` and `Gemfile.lock` are modified, 
     #       then the layer is invalidated and `bundle install` will be executed
-    # @link https://github.com/envygeeks/jekyll-docker/blob/master/repos/jekyll/Dockerfile#L148
+    # @todo For some reason, `bundle install` must be run as `root`.
+    #       Check and solve related issue to be able to use `jekyll` user
     ##
     WORKDIR /srv/jekyll
     COPY --chown=jekyll:jekyll jekyll-theme-codify.gemspec ./
