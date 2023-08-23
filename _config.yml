@@ -1,9 +1,118 @@
 ##
 # @description Jekyll theme configuration
 # @author      Cristian Marcelo de Picciotto <d3p1@d3p1.dev>
+# @note        This theme is an extension of the Chirpy theme. Because of that,
+#              it customize some of its settings and add new ones
+# @link        https://github.com/cotes2020/jekyll-theme-chirpy
 ##
 
 ##
-# @note Add theme dependency
+# @note As mandatory values, you must configure:
+#       - `url`
+#       - `base_url`
+#       - `lang`
+#       - `timezone`
+#       - `title`
+#       - `tagline`
+#       - `description`
+#       - `google_site_verification`
+#       - `google_analytics.id`
+# @note As optional values, you may configure:
+#       - `github.username`
+#       - `twitter.username`
+#       - `social.name`
+#       - `social.email`
+#       - `social.links`
+#       - `img_cdn`
+#       - `paginate`
+#       - `jekyll-archives`
+#       - `comments`
+#       - `collections.tabs`
+# @link https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_config.yml
 ##
-theme: jekyll-theme-chirpy
+
+##
+# @note Disable 'Table of Contents'
+##
+toc: 
+  false
+
+##
+# @note Enable PWA
+##
+pwa:
+  enabled: 
+    true
+
+##
+# @note Kramdown configuration
+##
+kramdown:
+  syntax_highlighter: 
+    rouge
+  syntax_highlighter_opts:
+    css_class: 
+      highlight
+    span:
+      line_numbers: 
+        false
+    block:
+      line_numbers: 
+        true
+      start_line: 
+        1
+
+##
+# @note Set default settings/values for page types
+##
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /posts/:title/
+  - scope:
+      path: assets/img/favicons
+    values:
+      swcache: true
+  - scope:
+      path: assets/js/dist
+    values:
+      swcache: true
+
+##
+# @note Compress Sass
+##
+sass:
+  style: 
+    compressed
+
+##
+# @note Compress HTML
+##
+compress_html:
+  clippings: 
+    all
+  comments: 
+    all
+  endings: 
+    all
+  profile: 
+    false
+  blanklines: 
+    false
+  ignore:
+    envs: 
+      [development]
+
+##
+# @note Exclude unneeded files from building
+##
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - README.md
+  - CHANGELOG.md
+  - LICENSE
+  - Dockerfile
