@@ -9,13 +9,16 @@
 FROM jekyll/minimal:4.0
     ##
     # @note Set working directory and copy related files to build site
+    # @note Use `jekyll` as `user:group` as it is used in the base image
+    #       for this path
     # @note We are going to copy the `Gemfile` and `Gemfile.lock` first 
     #       to cache them. If `Gemfile` and `Gemfile.lock` are modified, 
     #       then the layer is invalidated and `bundle install` will be executed
+    # @link https://github.com/envygeeks/jekyll-docker/blob/master/repos/jekyll/Dockerfile#L148
     ##
     WORKDIR /srv/jekyll
-    COPY --chown=${USER_UID}:${USER_GID} jekyll-theme-codify.gemspec ./
-    COPY --chown=${USER_UID}:${USER_GID} Gemfile ./
-    COPY --chown=${USER_UID}:${USER_GID} Gemfile.lock ./
+    COPY --chown=jekyll:jekyll jekyll-theme-codify.gemspec ./
+    COPY --chown=jekyll:jekyll Gemfile ./
+    COPY --chown=jekyll:jekyll Gemfile.lock ./
     RUN bundle install
-    COPY --chown=${USER_UID}:${USER_GID} . ./
+    COPY --chown=jekyll:jekyll . ./
