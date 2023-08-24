@@ -7,7 +7,7 @@
 # frozen_string_literal: true
 Gem::Specification.new do |spec|
   spec.name     = "jekyll-theme-codify"
-  spec.version  = "0.1.0"
+  spec.version  = "0.0.0"
   spec.authors  = ["Cristian Marcelo de Picciotto"]
   spec.email    = ["d3p1@d3p1.dev"]
   spec.summary  = "A Jekyll theme from a developer to developers"
