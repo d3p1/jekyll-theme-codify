@@ -38,7 +38,7 @@ FROM jekyll/minimal:4.0
     # @note We are going to copy the `Gemfile` and `Gemfile.lock` first 
     #       to cache them. If `Gemfile` and `Gemfile.lock` are modified, 
     #       then the layer is invalidated and `bundle install` will be executed
-    # @note For some reason, `bundle install` must be run as `root`.
+    # @todo For some reason, `bundle install` must be run as `root`.
     #       Check and solve related issue to be able to use `jekyll` user
     ##
     WORKDIR /srv/jekyll
