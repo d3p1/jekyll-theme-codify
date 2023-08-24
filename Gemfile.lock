@@ -90,7 +90,6 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll-sass-converter (~> 2.0)
-  jekyll-theme-chirpy (~> 6.1)
   jekyll-theme-codify!
 
 BUNDLED WITH
