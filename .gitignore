@@ -9,3 +9,4 @@ _site/
 .bundle/
 vendor/
 _config.env.yml
+jekyll-theme-codify-*.gem
