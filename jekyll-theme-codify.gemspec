@@ -1,6 +1,6 @@
 ##
 # @description Jekyll theme gem spec
-# @author      Cristian Marcelo de Picciotto <d3p1@d3p1.dev>
+# @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
 # @note        This theme is an extension/personalization of the Chirpy theme,
 #              that is why it depends on `jekyll-theme-chirpy`
 ##

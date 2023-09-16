@@ -1,6 +1,6 @@
 ##
 # @description Jekyll theme configuration
-# @author      Cristian Marcelo de Picciotto <d3p1@d3p1.dev>
+# @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
 # @note        This theme is an extension of the Chirpy theme. Because of that,
 #              it customize some of its settings and add new ones
 # @link        https://github.com/cotes2020/jekyll-theme-chirpy
@@ -34,33 +34,26 @@
 ##
 # @note Disable 'Table of Contents'
 ##
-toc: 
-  false
+toc: false
 
 ##
 # @note Enable PWA
 ##
 pwa:
-  enabled: 
-    true
+  enabled: true
 
 ##
 # @note Kramdown configuration
 ##
 kramdown:
-  syntax_highlighter: 
-    rouge
+  syntax_highlighter: rouge
   syntax_highlighter_opts:
-    css_class: 
-      highlight
+    css_class: highlight
     span:
-      line_numbers: 
-        false
+      line_numbers: false
     block:
-      line_numbers: 
-        true
-      start_line: 
-        1
+      line_numbers: true
+      start_line: 1
 
 ##
 # @note Set default settings/values for page types
@@ -85,26 +78,19 @@ defaults:
 # @note Compress Sass
 ##
 sass:
-  style: 
-    compressed
+  style: compressed
 
 ##
 # @note Compress HTML
 ##
 compress_html:
-  clippings: 
-    all
-  comments: 
-    all
-  endings: 
-    all
-  profile: 
-    false
-  blanklines: 
-    false
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
   ignore:
-    envs: 
-      [development]
+    envs: [development]
 
 ##
 # @note Exclude unneeded files from building
