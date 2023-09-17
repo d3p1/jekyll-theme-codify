@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jekyll-theme-codify (0.1.0)
+    jekyll-theme-codify (0.0.0)
       jekyll (~> 4.3)
       jekyll-theme-chirpy (~> 6.1)
 
@@ -50,7 +50,7 @@ GEM
       jekyll (>= 3.8, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-theme-chirpy (6.1.0)
+    jekyll-theme-chirpy (6.2.2)
       jekyll (~> 4.3)
       jekyll-archives (~> 2.2)
       jekyll-include-cache (~> 0.2)

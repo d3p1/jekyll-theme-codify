@@ -84,12 +84,12 @@ sass:
 # @note Compress HTML
 ##
 compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  profile: false
+  clippings : all
+  comments  : all
+  endings   : all
+  profile   : false
   blanklines: false
-  ignore:
+  ignore    :
     envs: [development]
 
 ##

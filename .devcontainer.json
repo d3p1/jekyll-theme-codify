@@ -4,9 +4,13 @@
  */
 {
 	"dockerFile"     : "Dockerfile",
-	"workspaceMount" : "source=${localWorkspaceFolder},target=/srv/jekyll,type=bind,consistency=cached",
-	"workspaceFolder": "/srv/jekyll",
-	"appPort"        : ["80:4000"],
+	"workspaceMount" : "source=${localWorkspaceFolder},target=/var/www,type=bind,consistency=cached",
+	"workspaceFolder": "/var/www",
+	"appPort"        : ["80:80"],
+	"containerEnv"   : {
+		"HOST": "d3p1.test"
+	},
+	"overrideCommand": false,
 	"remoteUser"     : "jekyll",
 	"customizations" : {
 		"vscode": {
