@@ -11,7 +11,13 @@ Gem::Specification.new do |spec|
   spec.authors  = ["Cristian Marcelo de Picciotto"]
   spec.email    = ["d3p1@d3p1.dev"]
   spec.summary  = "A Jekyll theme from a developer to developers"
-  spec.homepage = "https://d3p1.dev"
+  spec.homepage = "https://github.com/d3p1/jekyll-theme-codify"
+  spec.metadata = {
+    "bug_tracker_uri"   => "https://github.com/d3p1/jekyll-theme-codify/issues",
+    "documentation_uri" => "https://github.com/d3p1/jekyll-theme-codify/#readme",
+    "source_code_uri"   => "https://github.com/d3p1/jekyll-theme-codify",
+    "plugin_type"       => "theme"
+  }
   spec.license  = "MIT"
   spec.files    = `git ls-files -z`.split("\x0").select { 
     |f| f.match(
