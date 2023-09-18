@@ -32,6 +32,12 @@
 ##
 
 ##
+# @note This theme extends from the Chirpy theme
+# @link https://github.com/cotes2020/jekyll-theme-chirpy
+##
+theme: jekyll-theme-chirpy
+
+##
 # @note Disable 'Table of Contents'
 ##
 toc: false

@@ -7,7 +7,7 @@
 # frozen_string_literal: true
 Gem::Specification.new do |spec|
   spec.name     = "jekyll-theme-codify"
-  spec.version  = "0.0.0"
+  spec.version  = "0.0.0.alpha.1"
   spec.authors  = ["Cristian Marcelo de Picciotto"]
   spec.email    = ["d3p1@d3p1.dev"]
   spec.summary  = "A Jekyll theme from a developer to developers"
@@ -18,8 +18,8 @@ Gem::Specification.new do |spec|
     "source_code_uri"   => "https://github.com/d3p1/jekyll-theme-codify",
     "plugin_type"       => "theme"
   }
-  spec.license  = "MIT"
-  spec.files    = `git ls-files -z`.split("\x0").select { 
+  spec.license = "MIT"
+  spec.files   = `git ls-files -z`.split("\x0").select { 
     |f| f.match(
       %r!^(assets|_data|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i
     ) 
