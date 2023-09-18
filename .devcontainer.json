@@ -3,20 +3,19 @@
  * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
  */
 {
-	"dockerFile"     : "Dockerfile",
-	"workspaceMount" : "source=${localWorkspaceFolder},target=/var/www,type=bind,consistency=cached",
-	"workspaceFolder": "/var/www",
-	"appPort"        : ["80:80"],
-	"containerEnv"   : {
-		"HOST": "d3p1.test"
-	},
-	"overrideCommand": false,
-	"remoteUser"     : "jekyll",
-	"customizations" : {
-		"vscode": {
-			"extensions": [
-				"sissel.shopify-liquid"
-			]
-		}
-	}
+  "dockerFile"     : "Dockerfile",
+  "workspaceMount" : "source=${localWorkspaceFolder},target=/var/www,type=bind,consistency=cached",
+  "workspaceFolder": "/var/www",
+  "appPort"        : ["80:80"],
+  "containerEnv"   : {
+    "HOST": "d3p1.test"
+  },
+  "overrideCommand" : false,
+  "postStartCommand": "nohup bundle exec jekyll build --watch &",
+  "remoteUser"      : "jekyll",
+  "customizations"  : {
+    "vscode": {
+      "extensions": ["sissel.shopify-liquid"]
+    }
+  }
 }
