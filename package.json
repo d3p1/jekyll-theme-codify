@@ -1,0 +1,21 @@
+{
+  "name": "@d3p1/jekyll-theme-codify",
+  "version": "0.0.0",
+  "description": "A Jekyll theme from a developer to developers",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d3p1/jekyll-theme-codify.git"
+  },
+  "author": "C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/d3p1/jekyll-theme-codify/issues"
+  },
+  "homepage": "https://github.com/d3p1/jekyll-theme-codify",
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@d3p1/commitlint-config": "^1.0.0",
+    "husky": "^8.0.3"
+  }
+}

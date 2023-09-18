@@ -8,6 +8,7 @@ _site/
 .jekyll-metadata
 .bundle/
 vendor/
+node_modules/
 _conf/
 _config.env.yml
 jekyll-theme-codify-*.gem
