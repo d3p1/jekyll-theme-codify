@@ -11,10 +11,5 @@
     "HOST": "d3p1.test"
   },
   "overrideCommand": false,
-  "remoteUser"     : "jekyll",
-  "customizations" : {
-    "vscode": {
-      "extensions": ["sissel.shopify-liquid"]
-    }
-  }
+  "remoteUser"     : "jekyll"
 }

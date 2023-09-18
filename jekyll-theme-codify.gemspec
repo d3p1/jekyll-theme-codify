@@ -1,8 +1,6 @@
 ##
 # @description Jekyll theme gem spec
 # @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
-# @note        This theme is an extension/personalization of the Chirpy theme,
-#              that is why it depends on `jekyll-theme-chirpy`
 ##
 # frozen_string_literal: true
 Gem::Specification.new do |spec|
@@ -25,5 +23,4 @@ Gem::Specification.new do |spec|
     ) 
   }
   spec.add_runtime_dependency "jekyll", "~> 4.3"
-  spec.add_runtime_dependency "jekyll-theme-chirpy", "~> 6.1"
 end
