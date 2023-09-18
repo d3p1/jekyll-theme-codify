@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jekyll-theme-codify (0.0.0.alpha.1)
+    jekyll-theme-codify (0.0.2)
       jekyll (~> 4.3)
       jekyll-theme-chirpy (~> 6.1)
 
