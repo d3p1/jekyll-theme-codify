@@ -10,10 +10,9 @@
   "containerEnv"   : {
     "HOST": "d3p1.test"
   },
-  "overrideCommand" : false,
-  "postStartCommand": "nohup bundle exec jekyll build --watch &",
-  "remoteUser"      : "jekyll",
-  "customizations"  : {
+  "overrideCommand": false,
+  "remoteUser"     : "jekyll",
+  "customizations" : {
     "vscode": {
       "extensions": ["sissel.shopify-liquid"]
     }
