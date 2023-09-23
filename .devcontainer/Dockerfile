@@ -19,15 +19,3 @@ FROM d3p1/jekyll:nginx-alpine3.18
     # @note Install Node.js for development purpose
     ##
     RUN apk --no-cache add nodejs npm
-
-    ##
-    # @note It is re-used the base image entrypoint.
-    #       If it is not defined an entrypoint, 
-    #       the following error is dispatched when `CMD` is declared:
-    #       `Shell server terminated (code: 126, signal: null)
-    #        OCI runtime exec failed: exec failed: unable to start 
-    #        container process: error executing setns process: 
-    #        exit status 1: unknown`
-    ##
-    ENTRYPOINT ["/main.docker-entrypoint.sh"]
-    CMD ["bundle", "exec", "jekyll", "build", "--watch", "--config=_config.yml,_config.env.yml"]

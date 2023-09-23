@@ -10,6 +10,5 @@
   "containerEnv"   : {
     "HOST": "d3p1.test"
   },
-  "overrideCommand": false,
-  "remoteUser"     : "jekyll"
+  "overrideCommand": true
 }

@@ -19,8 +19,14 @@ Gem::Specification.new do |spec|
   spec.license = "MIT"
   spec.files   = `git ls-files -z`.split("\x0").select { 
     |f| f.match(
-      %r!^(assets|_data|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i
+      %r!^((_(includes|layouts|sass|(data\/(locales|origin)))|assets)\/|README|LICENSE)!i
     ) 
   }
   spec.add_runtime_dependency "jekyll", "~> 4.3"
+  spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"
+  spec.add_runtime_dependency "jekyll-redirect-from", "~> 0.16"
+  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.7"
+  spec.add_runtime_dependency "jekyll-archives", "~> 2.2"
+  spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4"
+  spec.add_runtime_dependency "jekyll-include-cache", "~> 0.2"
 end

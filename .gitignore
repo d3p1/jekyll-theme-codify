@@ -2,13 +2,13 @@
 # @description Git ignore
 # @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
 ##
-_site/
-.sass-cache/
-.jekyll-cache/
+_site
+.sass-cache
+.jekyll-cache
 .jekyll-metadata
-.bundle/
-vendor/
-node_modules/
-_conf/
+.bundle
+vendor
+node_modules
+_conf
 _config.env.yml
-jekyll-theme-codify-*.gem
+*.gem

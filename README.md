@@ -1,2 +1,5 @@
-# [CODIFY JEKYLL THEME]
+<div align=center>
+    
+    # [CODIFY JEKYLL THEME]
 
+</div>
